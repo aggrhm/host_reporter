@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+require 'boxchief'
+
+class AppReporter < Boxchief::Reporter
+
+  def process_options
+    super
+    @options[:container] = ENV['CNTR_NAME']
+    @options[:container_type] = ENV['CNTR_TYPE'].to_sym if ENV['CNTR_TYPE']
+  end
+
+  def build_data
+    data = {}
+    case @options[:container_type]
+    when :hw
+      data.merge! hw_data
+    end
+    return data
+  end
+
+  def hw_data
+    data = {}
+    data[:cpu_usage] = Boxchief::Utils.get_cpu_usage
+    data[:mem_usage] = Boxchief::Utils.get_memory_usage
+    data[:tcp_connections] = Boxchief::Utils.get_tcp_conn_count
+    return data
+  end
+
+end
+
+AppReporter.new.run

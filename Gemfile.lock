@@ -1,0 +1,23 @@
+GIT
+  remote: git://github.com/agquick/boxchief.git
+  revision: a7a7ee43622777e1d137e5300a28710ecfc7d0d0
+  specs:
+    boxchief (0.1.4)
+      faraday (~> 0.9.0)
+      sys-proctable (~> 0.9.4)
+      usagewatch (~> 0.0.7)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    multipart-post (2.0.0)
+    sys-proctable (0.9.4)
+    usagewatch (0.0.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  boxchief!
