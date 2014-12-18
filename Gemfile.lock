@@ -1,8 +1,9 @@
 GIT
   remote: git://github.com/agquick/boxchief.git
-  revision: a7a7ee43622777e1d137e5300a28710ecfc7d0d0
+  revision: c2e63224864339f86988b7412d15095deffdcd39
+  tag: v0.1.6
   specs:
-    boxchief (0.1.4)
+    boxchief (0.1.6)
       faraday (~> 0.9.0)
       sys-proctable (~> 0.9.4)
       usagewatch (~> 0.0.7)

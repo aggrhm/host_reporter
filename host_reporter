@@ -23,6 +23,7 @@ class AppReporter < Boxchief::Reporter
     data = {}
     data[:cpu_usage] = Boxchief::Utils.get_cpu_usage
     data[:mem_usage] = Boxchief::Utils.get_memory_usage
+    data[:root_disk_usage] = Boxchief::Utils.get_disk_usage("/")
     data[:tcp_connections] = Boxchief::Utils.get_tcp_conn_count
     return data
   end
